@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite sua nota em Matemática:");
+        int notaMatematica = scanner.nextInt();
+
+        System.out.println("Digite sua nota em Ciências:");
+        int notaCiencias = scanner.nextInt();
+
+        // Decisão do agente
+        if (notaMatematica >= 7 && notaCiencias >= 7) {
+            System.out.println("Recomendamos o curso de Engenharia.");
+        } else if (notaMatematica >= 5 && notaCiencias >= 5) {
+            System.out.println("Recomendamos o curso de Tecnologia da Informação.");
+        } else {
+            System.out.println("Recomendamos que você estude mais antes de escolher um curso.");
+        }
+
+        scanner.close();
+    }
+}
